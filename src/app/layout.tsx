@@ -1,7 +1,12 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ 
+  weight: ['400', '700', '500', '900', '100', '300'],
+  style: ['normal'],
+  display: 'swap',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Mines',
@@ -15,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br" className='h-screen bg-[#0F1923] flex items-center justify-center'>
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }
